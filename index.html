@@ -1,286 +1,152 @@
-<script>
-    // Traducciones
-    const translations = {
-        es: {
-            "nav.about": "Acerca de",
-            "nav.mission": "Misión",
-            "nav.team": "Equipo",
-            "nav.contact": "Contacto",
-            "hero.title": "IA Ética para el Bienestar Humano",
-            "hero.subtitle": "Creando reglas para una IA viva con ética para mejorar vidas humanas y bienestar",
-            "hero.learnMore": "Conoce Más",
-            "hero.invest": "Invertir en LAIA",
-            "about.title": "Nuestra Visión",
-            "about.subtitle": "LAIA está pionereando el desarrollo de marcos éticos para sistemas de IA vivos",
-            "about.feature1.title": "Marco de IA Ética",
-            "about.feature1.description": "Desarrollando guías éticas comprehensivas y reglas para sistemas de IA vivos que priorizan valores humanos y bienestar.",
-            "about.feature2.title": "Enfoque en Bienestar Humano",
-            "about.feature2.description": "Creando sistemas de IA diseñados para mejorar vidas humanas, salud mental y calidad de vida mediante implementación cuidadosa.",
-            "about.feature3.title": "Transparente y Responsable",
-            "about.feature3.description": "Construyendo IA con transparencia y responsabilidad en su núcleo, asegurando que las decisiones puedan ser entendidas y cuestionadas por humanos.",
-            "mission.title": "Nuestra Misión",
-            "mission.subtitle": "Creando un futuro donde la IA y la humanidad prosperen juntas",
-            "mission.content.title": "Construyendo Fundamentos Éticos para IA Viva",
-            "mission.content.p1": "En LAIA, creemos que la inteligencia artificial debe ser desarrollada con principios éticos sólidos que prioricen la dignidad humana, los derechos y el bienestar. Nuestra misión es crear marcos y reglas comprehensivos que guíen el desarrollo de sistemas de IA vivos.",
-            "mission.content.p2": "Estamos abordando la necesidad crítica de guías éticas en el desarrollo de IA que vayan más allá del simple seguimiento de reglas para abarcar empatía, razonamiento moral y un compromiso genuino con mejorar vidas humanas.",
-            "mission.content.p3": "Nuestro enfoque combina investigación de vanguardia en IA con profunda investigación filosófica, asegurando que los sistemas de IA que ayudamos a crear no solo sean inteligentes, sino sabios, compasivos y alineados con valores humanos.",
-            "mission.content.button": "Únete a Nuestra Misión",
-            "team.title": "Nuestro Equipo",
-            "team.subtitle": "Expertos en IA, ética y diseño centrado en humanos",
-            "team.role": "Fundador & Especialista en Ética de IA",
-            "cta.title": "Únete a Nosotros en la Formación de IA Ética",
-            "cta.description": "Buscamos inversores que compartan nuestra visión para crear IA que priorice el bienestar humano y los principios éticos. Únete a nosotros en construir un futuro donde la tecnología sirva a la humanidad.",
-            "cta.button": "Contactar para Inversión",
-            "footer.description": "Creando reglas para una IA viva con ética en mente y para mejorar vidas humanas y bienestar.",
-            "footer.links": "Enlaces Rápidos",
-            "footer.contact": "Contacto",
-            "footer.github": "Repositorio GitHub",
-            "footer.rights": "Todos los derechos reservados."
-        },
-        ca: {
-            "nav.about": "Sobre nosaltres",
-            "nav.mission": "Missió",
-            "nav.team": "Equip",
-            "nav.contact": "Contacte",
-            "hero.title": "IA Ètica per al Benestar Humà",
-            "hero.subtitle": "Creant regles per a una IA viva amb ètica per millorar vides humanes i benestar",
-            "hero.learnMore": "Coneix Més",
-            "hero.invest": "Inverteix en LAIA",
-            "about.title": "La Nostra Visió",
-            "about.subtitle": "LAIA està pionerant el desenvolupament de marcs ètics per a sistemes d'IA vius",
-            "about.feature1.title": "Marc d'IA Ètica",
-            "about.feature1.description": "Desenvolupant guies ètiques comprensives i regles per a sistemes d'IA vius que prioritzen valors humans i benestar.",
-            "about.feature2.title": "Enfocament en Benestar Humà",
-            "about.feature2.description": "Creant sistemes d'IA dissenyats per millorar vides humanes, salut mental i qualitat de vida mitjançant implementació acurada.",
-            "about.feature3.title": "Transparent i Responsable",
-            "about.feature3.description": "Construint IA amb transparència i responsabilitat en el seu nucli, assegurant que les decisions puguin ser enteses i qüestionades per humans.",
-            "mission.title": "La Nostra Missió",
-            "mission.subtitle": "Creant un futur on la IA i la humanitat prosperin juntes",
-            "mission.content.title": "Construint Fonaments Ètics per a IA Viva",
-            "mission.content.p1": "A LAIA, creiem que la intel·ligència artificial ha de ser desenvolupada amb principis ètics sòlids que prioritzin la dignitat humana, els drets i el benestar. La nostra missió és crear marcs i regles comprensius que guiin el desenvolupament de sistemes d'IA vius.",
-            "mission.content.p2": "Estem abordant la necessitat crítica de guies ètiques en el desenvolupament d'IA que vagin més enllà del simple seguiment de regles per abastar empatia, raonament moral i un compromís genuí amb millorar vides humanes.",
-            "mission.content.p3": "El nostre enfocament combina investigació d'avantguarda en IA amb profunda investigació filosòfica, assegurant que els sistemes d'IA que ajudem a crear no només siguin intel·ligents, sinó savis, compassius i alineats amb valors humans.",
-            "mission.content.button": "Uneix-te a la Nostra Missió",
-            "team.title": "El Nostre Equip",
-            "team.subtitle": "Experts en IA, ètica i disseny centrat en humans",
-            "team.role": "Fundador & Especialista en Ètica d'IA",
-            "cta.title": "Uneix-te a Nosaltres en la Formació d'IA Ètica",
-            "cta.description": "Busquem inversors que comparteixin la nostra visió per crear IA que prioritzi el benestar humà i els principis ètics. Uneix-te a nosaltres en construir un futur on la tecnologia serveixi a la humanitat.",
-            "cta.button": "Contactar per Inversió",
-            "footer.description": "Creant regles per a una IA viva amb ètica en ment i per millorar vides humanes i benestar.",
-            "footer.links": "Enllaços Ràpids",
-            "footer.contact": "Contacte",
-            "footer.github": "Repositori GitHub",
-            "footer.rights": "Tots els drets reservats."
-        },
-        zh: {
-            "nav.about": "关于我们",
-            "nav.mission": "使命",
-            "nav.team": "团队",
-            "nav.contact": "联系方式",
-            "hero.title": "伦理人工智能促进人类福祉",
-            "hero.subtitle": "为有生命的AI制定道德规则，以改善人类生活和福祉",
-            "hero.learnMore": "了解更多",
-            "hero.invest": "投资LAIA",
-            "about.title": "我们的愿景",
-            "about.subtitle": "LAIA正在开创有生命AI系统的伦理框架开发",
-            "about.feature1.title": "伦理AI框架",
-            "about.feature1.description": "为有生命AI系统开发全面的伦理指南和规则，优先考虑人类价值观和福祉。",
-            "about.feature2.title": "关注人类福祉",
-            "about.feature2.description": "通过精心实施，创建旨在改善人类生活、心理健康和生活质量的AI系统。",
-            "about.feature3.title": "透明和负责任",
-            "about.feature3.description": "在核心构建具有透明度和责任感的AI，确保决策能够被人类理解和质疑。",
-            "mission.title": "我们的使命",
-            "mission.subtitle": "创造AI与人类共同繁荣的未来",
-            "mission.content.title": "为有生命AI构建伦理基础",
-            "mission.content.p1": "在LAIA，我们相信人工智能应该以坚实的伦理原则发展，优先考虑人类尊严、权利和福祉。我们的使命是创建全面的框架和规则，指导有生命AI系统的发展。",
-            "mission.content.p2": "我们正在解决AI发展中关键的伦理指南需求，超越简单的规则遵循，涵盖同理心、道德推理和真正致力于改善人类生活的承诺。",
-            "mission.content.p3": "我们的方法结合了AI前沿研究和深入的哲学探究，确保我们帮助创建的AI系统不仅智能，而且智慧、富有同情心并与人类价值观保持一致。",
-            "mission.content.button": "加入我们的使命",
-            "team.title": "我们的团队",
-            "team.subtitle": "AI、伦理和以人为中心设计的专家",
-            "team.role": "创始人兼AI伦理专家",
-            "cta.title": "加入我们塑造伦理AI",
-            "cta.description": "我们寻找与我们愿景相同的投资者，创建优先考虑人类福祉和伦理原则的AI。加入我们，共同构建技术为人类服务的未来。",
-            "cta.button": "联系投资",
-            "footer.description": "为有生命的AI制定道德规则，以改善人类生活和福祉。",
-            "footer.links": "快速链接",
-            "footer.contact": "联系方式",
-            "footer.github": "GitHub仓库",
-            "footer.rights": "保留所有权利。"
-        },
-        ru: {
-            "nav.about": "О нас",
-            "nav.mission": "Миссия",
-            "nav.team": "Команда",
-            "nav.contact": "Контакты",
-            "hero.title": "Этический ИИ для Благополучия Человечества",
-            "hero.subtitle": "Создание правил для живого ИИ с учетом этики для улучшения человеческой жизни и благополучия",
-            "hero.learnMore": "Узнать Больше",
-            "hero.invest": "Инвестировать в LAIA",
-            "about.title": "Наше Видение",
-            "about.subtitle": "LAIA является пионером в разработке этических framework для живых систем ИИ",
-            "about.feature1.title": "Этический Фреймворк ИИ",
-            "about.feature1.description": "Разработка комплексных этических руководств и правил для живых систем ИИ, которые ставят во главу угла человеческие ценности и благополучие.",
-            "about.feature2.title": "Фокус на Благополучии Человека",
-            "about.feature2.description": "Создание систем ИИ, предназначенных для улучшения человеческой жизни, психического здоровья и качества жизни посредством тщательной реализации.",
-            "about.feature3.title": "Прозрачный и Ответственный",
-            "about.feature3.description": "Создание ИИ с прозрачностью и ответственностью в его основе, обеспечивая, чтобы решения могли быть поняты и оспорены людьми.",
-            "mission.title": "Наша Миссия",
-            "mission.subtitle": "Создание будущего, где ИИ и человечество процветают вместе",
-            "mission.content.title": "Создание Этических Основ для Живого ИИ",
-            "mission.content.p1": "В LAIA мы считаем, что искусственный интеллект должен разрабатываться с твердыми этическими принципами, которые ставят во главу угла человеческое достоинство, права и благополучие. Наша миссия - создавать комплексные framework и правила, которые направляют развитие живых систем ИИ.",
-            "mission.content.p2": "Мы решаем критическую потребность в этических руководствах в разработке ИИ, которые выходят за рамки простого следования правилам, чтобы охватить эмпатию, моральное рассуждение и подлинную приверженность улучшению человеческой жизни.",
-            "mission.content.p3": "Наш подход сочетает передовые исследования в области ИИ с глубоким философским исследованием, обеспечивая, чтобы системы ИИ, которые мы помогаем создать, не только были умными, но и мудрыми, сострадательными и согласованными с человеческими ценностями.",
-            "mission.content.button": "Присоединиться к Нашей Миссии",
-            "team.title": "Наша Команда",
-            "team.subtitle": "Эксперты в ИИ, этике и человеко-ориентированном дизайне",
-            "team.role": "Основатель & Специалист по Этике ИИ",
-            "cta.title": "Присоединяйтесь к Нам в Создании Этического ИИ",
-            "cta.description": "Мы ищем инвесторов, которые разделяют наше видение создания ИИ, ставящего во главу угла благополучие человека и этические принципы. Присоединяйтесь к нам в построении будущего, где технология служит человечеству.",
-            "cta.button": "Связаться по Инвестициям",
-            "footer.description": "Создание правил для живого ИИ с учетом этики для улучшения человеческой жизни и благополучия.",
-            "footer.links": "Быстрые Ссылки",
-            "footer.contact": "Контакты",
-            "footer.github": "Репозиторий GitHub",
-            "footer.rights": "Все права защищены."
-        },
-        he: {
-            "nav.about": "אודות",
-            "nav.mission": "משימה",
-            "nav.team": "צוות",
-            "nav.contact": "יצירת קשר",
-            "hero.title": "בינה מלאכותית אתית לרווחת האדם",
-            "hero.subtitle": "יצירת כללים עבור בינה מלאכותית חיה עם אתיקה לשיפור חיי אדם ורווחה",
-            "hero.learnMore": "למד עוד",
-            "hero.invest": "השקע ב-LAIA",
-            "about.title": "החזון שלנו",
-            "about.subtitle": "LAIA חלוצה בפיתוח מסגרות אתיות למערכות בינה מלאכותית חיות",
-            "about.feature1.title": "מסגרת בינה מלאכותית אתית",
-            "about.feature1.description": "פיתוח הנחיות אתיות מקיפות וכללים למערכות בינה מלאכותית חיות ששמות בעדיפות ערכים אנושיים ורווחה.",
-            "about.feature2.title": "מיקוד ברווחת האדם",
-            "about.feature2.description": "יצירת מערכות בינה מלאכותית שנועדו לשפר חיי אדם, בריאות נפשית ואיכות חיים באמצעות יישום זהיר.",
-            "about.feature3.title": "שקוף ואחראי",
-            "about.feature3.description": "בניית בינה מלאכותית עם שקיפות ואחריות בליבה, וידוא שהחלטות יכולות להיות מובנות וניתנות לערעור על ידי בני אדם.",
-            "mission.title": "המשימה שלנו",
-            "mission.subtitle": "יצירת עתיד שבו בינה מלאכותית והאנושות משגשגות יחד",
-            "mission.content.title": "בניית יסודות אתיים לבינה מלאכותית חיה",
-            "mission.content.p1": "ב-LAIA, אנו מאמינים שבינה מלאכותית צריכה להיות מפותחת עם עקרונות אתיים איתנים ששמים בעדיפות כבוד אנושי, זכויות ורווחה. המשימה שלנו היא ליצור מסגרות וכללים מקיפים שמנחים את הפיתוח של מערכות בינה מלאכותית חיות.",
-            "mission.content.p2": "אנו מתייחסים לצורך הקריטי בהנחיות אתיות בפיתוח בינה מלאכותית שהולכות מעבר למעקב פשוט אחר כללים כדי לכלול אמפתיה, חשיבה מוסרית ומחויבות אמיתית לשיפור חיי אדם.",
-            "mission.content.p3": "הגישה שלנו משלבת מחקר מתקדם בבינה מלאכותית עם מחקר פילוסופי מעמיק, וודא שמערכות הבינה המלאכותית שאנו עוזרים ליצור אינן רק אינטליגנטיות, אלא חכמות, חומלות ומותאמות לערכים אנושיים.",
-            "mission.content.button": "הצטרף למשימה שלנו",
-            "team.title": "הצוות שלנו",
-            "team.subtitle": "מומחים בבינה מלאכותית, אתיקה ועיצוב ממוקד אדם",
-            "team.role": "מייסד & מומחה לאתיקה של בינה מלאכותית",
-            "cta.title": "הצטרפו אלינו בעיצוב בינה מלאכותית אתית",
-            "cta.description": "אנו מחפשים משקיעים שחולקים את החזון שלנו ליצירת בינה מלאכותית ששמה בעדיפות רווחת אדם ועקרונות אתיים. הצטרפו אלינו בבניית עתיד שבו הטכנולוגיה משרתת את האנושות.",
-            "cta.button": "יצירת קשר להשקעה",
-            "footer.description": "יצירת כללים עבור בינה מלאכותית חיה עם אתיקה במחשבה ולשיפור חיי אדם ורווחה.",
-            "footer.links": "קישורים מהירים",
-            "footer.contact": "יצירת קשר",
-            "footer.github": "מאגר GitHub",
-            "footer.rights": "כל הזכויות שמורות."
-        },
-        en: {
-            "nav.about": "About",
-            "nav.mission": "Mission",
-            "nav.team": "Team",
-            "nav.contact": "Contact",
-            "hero.title": "Ethical AI for Human Well-being",
-            "hero.subtitle": "Creating rules for a living AI with ethics in mind to improve human lives and well-being",
-            "hero.learnMore": "Learn More",
-            "hero.invest": "Invest in LAIA",
-            "about.title": "Our Vision",
-            "about.subtitle": "LAIA is pioneering the development of ethical frameworks for living AI systems",
-            "about.feature1.title": "Ethical AI Framework",
-            "about.feature1.description": "Developing comprehensive ethical guidelines and rules for living AI systems that prioritize human values and well-being.",
-            "about.feature2.title": "Human Well-being Focus",
-            "about.feature2.description": "Creating AI systems designed to enhance human lives, mental health, and quality of life through thoughtful implementation.",
-            "about.feature3.title": "Transparent & Accountable",
-            "about.feature3.description": "Building AI with transparency and accountability at its core, ensuring decisions can be understood and challenged by humans.",
-            "mission.title": "Our Mission",
-            "mission.subtitle": "Creating a future where AI and humanity thrive together",
-            "mission.content.title": "Building Ethical Foundations for Living AI",
-            "mission.content.p1": "At LAIA, we believe that artificial intelligence should be developed with strong ethical principles that prioritize human dignity, rights, and well-being. Our mission is to create comprehensive frameworks and rules that guide the development of living AI systems.",
-            "mission.content.p2": "We're addressing the critical need for ethical guidelines in AI development that go beyond simple rule-following to encompass empathy, moral reasoning, and a genuine commitment to improving human lives.",
-            "mission.content.p3": "Our approach combines cutting-edge AI research with deep philosophical inquiry, ensuring that the AI systems we help create are not just intelligent, but wise, compassionate, and aligned with human values.",
-            "mission.content.button": "Join Our Mission",
-            "team.title": "Our Team",
-            "team.subtitle": "Experts in AI, ethics, and human-centered design",
-            "team.role": "Founder & AI Ethics Specialist",
-            "cta.title": "Join Us in Shaping Ethical AI",
-            "cta.description": "We're seeking investors who share our vision for creating AI that prioritizes human well-being and ethical principles. Join us in building a future where technology serves humanity.",
-            "cta.button": "Contact for Investment",
-            "footer.description": "Creating rules for a living AI with ethics in mind and for improving human lives and well-being.",
-            "footer.links": "Quick Links",
-            "footer.contact": "Contact",
-            "footer.github": "GitHub Repository",
-            "footer.rights": "All rights reserved."
+"mission.content.button": "Присоединиться к Нашей Миссии",
+"team.title": "Наша Команда",
+"team.subtitle": "Эксперты в ИИ, этике и человеко-ориентированном дизайне",
+"team.role": "Основатель & Специалист по Этике ИИ",
+"cta.title": "Присоединяйтесь к Нам в Создании Этического ИИ",
+"cta.description": "Мы ищем инвесторов, которые разделяют наше видение создания ИИ, ставящего во главу угла благополучие человека и этические принципы. Присоединяйтесь к нам в построении будущего, где технология служит человечеству.",
+"cta.button": "Связаться по Инвестициям",
+"footer.description": "Создание правил для живого ИИ с учетом этики для улучшения человеческой жизни и благополучия.",
+"footer.links": "Быстрые Ссылки",
+"footer.contact": "Контакты",
+"footer.github": "Репозиторий GitHub",
+"footer.rights": "Все права защищены."
+},
+he: {
+"nav.about": "אודות",
+"nav.mission": "משימה",
+"nav.team": "צוות",
+"nav.contact": "יצירת קשר",
+"hero.title": "בינה מלאכותית אתית לרווחת האדם",
+"hero.subtitle": "יצירת כללים עבור בינה מלאכותית חיה עם אתיקה לשיפור חיי אדם ורווחה",
+"hero.learnMore": "למד עוד",
+"hero.invest": "השקע ב-LAIA",
+"about.title": "החזון שלנו",
+"about.subtitle": "LAIA חלוצה בפיתוח מסגרות אתיות למערכות בינה מלאכותית חיות",
+"about.feature1.title": "מסגרת בינה מלאכותית אתית",
+"about.feature1.description": "פיתוח הנחיות אתיות מקיפות וכללים למערכות בינה מלאכותית חיות ששמות בעדיפות ערכים אנושיים ורווחה.",
+"about.feature2.title": "מיקוד ברווחת האדם",
+"about.feature2.description": "יצירת מערכות בינה מלאכותית שנועדו לשפר חיי אדם, בריאות נפשית ואיכות חיים באמצעות יישום זהיר.",
+"about.feature3.title": "שקוף ואחראי",
+"about.feature3.description": "בניית בינה מלאכותית עם שקיפות ואחריות בליבה, וידוא שהחלטות יכולות להיות מובנות וניתנות לערעור על ידי בני אדם.",
+"mission.title": "המשימה שלנו",
+"mission.subtitle": "יצירת עתיד שבו בינה מלאכותית והאנושות משגשגות יחד",
+"mission.content.title": "בניית יסודות אתיים לבינה מלאכותית חיה",
+"mission.content.p1": "ב-LAIA, אנו מאמינים שבינה מלאכותית צריכה להיות מפותחת עם עקרונות אתיים איתנים ששמים בעדיפות כבוד אנושי, זכויות ורווחה. המשימה שלנו היא ליצור מסגרות וכללים מקיפים שמנחים את הפיתוח של מערכות בינה מלאכותית חיות.",
+"mission.content.p2": "אנו מתייחסים לצורך הקריטי בהנחיות אתיות בפיתוח בינה מלאכותית שהולכות מעבר למעקב פשוט אחר כללים כדי לכלול אמפתיה, חשיבה מוסרית ומחויבות אמיתית לשיפור חיי אדם.",
+"mission.content.p3": "הגישה שלנו משלבת מחקר מתקדם בבינה מלאכותית עם מחקר פילוסופי מעמיק, וודא שמערכות הבינה המלאכותית שאנו עוזרים ליצור אינן רק אינטליגנטיות, אלא חכמות, חומלות ומותאמות לערכים אנושיים.",
+"mission.content.button": "הצטרף למשימה שלנו",
+"team.title": "הצוות שלנו",
+"team.subtitle": "מומחים בבינה מלאכותית, אתיקה ועיצוב ממוקד אדם",
+"team.role": "מייסד & מומחה לאתיקה של בינה מלאכותית",
+"cta.title": "הצטרפו אלינו בעיצוב בינה מלאכותית אתית",
+"cta.description": "אנו מחפשים משקיעים שחולקים את החזון שלנו ליצירת בינה מלאכותית ששמה בעדיפות רווחת אדם ועקרונות אתיים. הצטרפו אלינו בבניית עתיד שבו הטכנולוגיה משרתת את האנושות.",
+"cta.button": "יצירת קשר להשקעה",
+"footer.description": "יצירת כללים עבור בינה מלאכותית חיה עם אתיקה במחשבה ולשיפור חיי אדם ורווחה.",
+"footer.links": "קישורים מהירים",
+"footer.contact": "יצירת קשר",
+"footer.github": "מאגר GitHub",
+"footer.rights": "כל הזכויות שמורות."
+},
+en: {
+"nav.about": "About",
+"nav.mission": "Mission",
+"nav.team": "Team",
+"nav.contact": "Contact",
+"hero.title": "Ethical AI for Human Well-being",
+"hero.subtitle": "Creating rules for a living AI with ethics in mind to improve human lives and well-being",
+"hero.learnMore": "Learn More",
+"hero.invest": "Invest in LAIA",
+"about.title": "Our Vision",
+"about.subtitle": "LAIA is pioneering the development of ethical frameworks for living AI systems",
+"about.feature1.title": "Ethical AI Framework",
+"about.feature1.description": "Developing comprehensive ethical guidelines and rules for living AI systems that prioritize human values and well-being.",
+"about.feature2.title": "Human Well-being Focus",
+"about.feature2.description": "Creating AI systems designed to enhance human lives, mental health, and quality of life through thoughtful implementation.",
+"about.feature3.title": "Transparent & Accountable",
+"about.feature3.description": "Building AI with transparency and accountability at its core, ensuring decisions can be understood and challenged by humans.",
+"mission.title": "Our Mission",
+"mission.subtitle": "Creating a future where AI and humanity thrive together",
+"mission.content.title": "Building Ethical Foundations for Living AI",
+"mission.content.p1": "At LAIA, we believe that artificial intelligence should be developed with strong ethical principles that prioritize human dignity, rights, and well-being. Our mission is to create comprehensive frameworks and rules that guide the development of living AI systems.",
+"mission.content.p2": "We're addressing the critical need for ethical guidelines in AI development that go beyond simple rule-following to encompass empathy, moral reasoning, and a genuine commitment to improving human lives.",
+"mission.content.p3": "Our approach combines cutting-edge AI research with deep philosophical inquiry, ensuring that the AI systems we help create are not just intelligent, but wise, compassionate, and aligned with human values.",
+"mission.content.button": "Join Our Mission",
+"team.title": "Our Team",
+"team.subtitle": "Experts in AI, ethics, and human-centered design",
+"team.role": "Founder & AI Ethics Specialist",
+"cta.title": "Join Us in Shaping Ethical AI",
+"cta.description": "We're seeking investors who share our vision for creating AI that prioritizes human well-being and ethical principles. Join us in building a future where technology serves humanity.",
+"cta.button": "Contact for Investment",
+"footer.description": "Creating rules for a living AI with ethics in mind and for improving human lives and well-being.",
+"footer.links": "Quick Links",
+"footer.contact": "Contact",
+"footer.github": "GitHub Repository",
+"footer.rights": "All rights reserved."
+}
+};
+
+// Función para cambiar idioma
+function changeLanguage(lang) {
+// Actualizar el atributo lang del html
+document.documentElement.lang = lang;
+
+// Actualizar todos los elementos con data-i18n
+document.querySelectorAll('[data-i18n]').forEach(element => {
+const key = element.getAttribute('data-i18n');
+if (translations[lang] && translations[lang][key]) {
+    element.textContent = translations[lang][key];
+}
+});
+
+// Guardar preferencia de idioma
+localStorage.setItem('preferred-language', lang);
+
+// Actualizar el selector
+document.getElementById('languageSelect').value = lang;
+}
+
+// Inicializar al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+const languageSelect = document.getElementById('languageSelect');
+const savedLanguage = localStorage.getItem('preferred-language') || 'es';
+
+// Establecer idioma guardado o español por defecto
+changeLanguage(savedLanguage);
+languageSelect.value = savedLanguage;
+
+// Event listener para el selector de idiomas
+languageSelect.addEventListener('change', function() {
+changeLanguage(this.value);
+});
+
+// Menú móvil
+document.querySelector('.mobile-menu').addEventListener('click', function() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+});
+
+// Scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+        });
+        
+        // Cerrar menú móvil si está abierto
+        if (window.innerWidth <= 768) {
+            document.querySelector('.nav-links').classList.remove('active');
         }
-    };
-
-    // Función para cambiar idioma
-    function changeLanguage(lang) {
-        // Actualizar el atributo lang del html
-        document.documentElement.lang = lang;
-        
-        // Actualizar todos los elementos con data-i18n
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
-            }
-        });
-
-        // Guardar preferencia de idioma
-        localStorage.setItem('preferred-language', lang);
-        
-        // Actualizar el selector
-        document.getElementById('languageSelect').value = lang;
     }
-
-    // Inicializar al cargar la página
-    document.addEventListener('DOMContentLoaded', function() {
-        const languageSelect = document.getElementById('languageSelect');
-        const savedLanguage = localStorage.getItem('preferred-language') || 'es';
-        
-        // Establecer idioma guardado o español por defecto
-        changeLanguage(savedLanguage);
-        languageSelect.value = savedLanguage;
-
-        // Event listener para el selector de idiomas
-        languageSelect.addEventListener('change', function() {
-            changeLanguage(this.value);
-        });
-
-        // Menú móvil
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        });
-
-        // Scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Cerrar menú móvil si está abierto
-                    if (window.innerWidth <= 768) {
-                        document.querySelector('.nav-links').classList.remove('active');
-                    }
-                }
-            });
-        });
-    });
+});
+});
+});
 </script>
 </body>
 </html>
