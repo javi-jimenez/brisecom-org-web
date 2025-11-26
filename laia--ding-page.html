@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAIA - Ethical Living AI for Human Well-being</title>
+    <title>LAIA - IA Ética para el Bienestar Humano</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base Styles */
+        /* Estilos Base */
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
@@ -96,7 +96,7 @@
             text-align: center;
         }
         
-        /* Header Styles */
+        /* Estilos del Header */
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -146,7 +146,7 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* Sección Hero */
         .hero {
             background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
             color: white;
@@ -191,7 +191,7 @@
             color: white;
         }
         
-        /* About Section */
+        /* Sección Acerca de */
         .about {
             background-color: white;
         }
@@ -246,7 +246,7 @@
             margin-bottom: 1.5rem;
         }
         
-        /* Mission Section */
+        /* Sección Misión */
         .mission {
             background-color: #f1f5f9;
         }
@@ -270,7 +270,7 @@
             display: block;
         }
         
-        /* Team Section */
+        /* Sección Equipo */
         .team {
             background-color: white;
         }
@@ -302,7 +302,7 @@
             color: var(--gray);
         }
         
-        /* CTA Section */
+        /* Sección CTA */
         .cta {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -396,8 +396,21 @@
             color: #94a3b8;
             font-size: 0.9rem;
         }
+
+        /* Icono combinado X/Twitter */
+        .x-twitter-icon {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
         
-        /* Responsive Styles */
+        .x-twitter-icon::before {
+            content: "𝕏";
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        /* Estilos Responsivos */
         @media (max-width: 992px) {
             h1 {
                 font-size: 2.8rem;
@@ -459,10 +472,10 @@
             <nav class="navbar">
                 <a href="#" class="logo">LAIA</a>
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#mission">Mission</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#mission">Misión</a></li>
+                    <li><a href="#team">Equipo</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                 </ul>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -471,70 +484,70 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Sección Hero -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Ethical AI for Human Well-being</h1>
-                <p>Creating rules for a living AI with ethics in mind to improve human lives and well-being</p>
+                <h1>IA Ética para el Bienestar Humano</h1>
+                <p>Creando reglas para una IA viva con ética para mejorar vidas humanas y bienestar</p>
                 <div class="hero-buttons">
-                    <a href="#mission" class="btn">Learn More</a>
-                    <a href="#contact" class="btn btn-secondary">Invest in LAIA</a>
+                    <a href="#mission" class="btn">Conoce Más</a>
+                    <a href="#contact" class="btn btn-secondary">Invertir en LAIA</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Sección Acerca de -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>Our Vision</h2>
-                <p>LAIA is pioneering the development of ethical frameworks for living AI systems</p>
+                <h2>Nuestra Visión</h2>
+                <p>LAIA está pionereando el desarrollo de marcos éticos para sistemas de IA vivos</p>
             </div>
             <div class="features">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Ethical AI Framework</h3>
-                    <p>Developing comprehensive ethical guidelines and rules for living AI systems that prioritize human values and well-being.</p>
+                    <h3>Marco de IA Ética</h3>
+                    <p>Desarrollando guías éticas comprehensivas y reglas para sistemas de IA vivos que priorizan valores humanos y bienestar.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Human Well-being Focus</h3>
-                    <p>Creating AI systems designed to enhance human lives, mental health, and overall quality of life through thoughtful implementation.</p>
+                    <h3>Enfoque en Bienestar Humano</h3>
+                    <p>Creando sistemas de IA diseñados para mejorar vidas humanas, salud mental y calidad de vida mediante implementación cuidadosa.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Transparent & Accountable</h3>
-                    <p>Building AI with transparency and accountability at its core, ensuring decisions can be understood and challenged by humans.</p>
+                    <h3>Transparente y Responsable</h3>
+                    <p>Construyendo IA con transparencia y responsabilidad en su núcleo, asegurando que las decisiones puedan ser entendidas y cuestionadas por humanos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
+    <!-- Sección Misión -->
     <section id="mission" class="mission">
         <div class="container">
             <div class="section-title">
-                <h2>Our Mission</h2>
-                <p>Creating a future where AI and humanity thrive together</p>
+                <h2>Nuestra Misión</h2>
+                <p>Creando un futuro donde la IA y la humanidad prosperen juntas</p>
             </div>
             <div class="mission-content">
                 <div class="mission-text">
-                    <h3>Building Ethical Foundations for Living AI</h3>
-                    <p>At LAIA, we believe that artificial intelligence should be developed with strong ethical principles that prioritize human dignity, rights, and well-being. Our mission is to create comprehensive frameworks and rules that guide the development of living AI systems.</p>
-                    <p>We're addressing the critical need for ethical guidelines in AI development that go beyond simple rule-following to encompass empathy, moral reasoning, and a genuine commitment to improving human lives.</p>
-                    <p>Our approach combines cutting-edge AI research with deep philosophical inquiry, ensuring that the AI systems we help create are not just intelligent, but wise, compassionate, and aligned with human values.</p>
-                    <a href="#contact" class="btn">Join Our Mission</a>
+                    <h3>Construyendo Fundamentos Éticos para IA Viva</h3>
+                    <p>En LAIA, creemos que la inteligencia artificial debe ser desarrollada con principios éticos sólidos que prioricen la dignidad humana, los derechos y el bienestar. Nuestra misión es crear marcos y reglas comprehensivos que guíen el desarrollo de sistemas de IA vivos.</p>
+                    <p>Estamos abordando la necesidad crítica de guías éticas en el desarrollo de IA que vayan más allá del simple seguimiento de reglas para abarcar empatía, razonamiento moral y un compromiso genuino con mejorar vidas humanas.</p>
+                    <p>Nuestro enfoque combina investigación de vanguardia en IA con profunda investigación filosófica, asegurando que los sistemas de IA que ayudamos a crear no solo sean inteligentes, sino sabios, compasivos y alineados con valores humanos.</p>
+                    <a href="#contact" class="btn">Únete a Nuestra Misión</a>
                 </div>
                 <div class="mission-image">
-                    <!-- Placeholder for mission image -->
+                    <!-- Placeholder para imagen de misión -->
                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
                         <i class="fas fa-robot" style="font-size: 8rem; opacity: 0.7;"></i>
                     </div>
@@ -543,52 +556,31 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Sección Equipo -->
     <section id="team" class="team">
         <div class="container">
             <div class="section-title">
-                <h2>Our Team</h2>
-                <p>Experts in AI, ethics, and human-centered design</p>
+                <h2>Nuestro Equipo</h2>
+                <p>Expertos en IA, ética y diseño centrado en humanos</p>
             </div>
             <div class="team-members">
                 <div class="team-member">
                     <div class="member-image">
                         <i class="fas fa-user"></i>
                     </div>
-                    <h3>Javi Jimenez</h3>
-                    <p>Founder & AI Ethicist</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Dr. Sarah Chen</h3>
-                    <p>AI Research Lead</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Marcus Johnson</h3>
-                    <p>Ethics & Philosophy Advisor</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Dr. Elena Rodriguez</h3>
-                    <p>Human Well-being Specialist</p>
+                    <h3>Francisco Ximénez</h3>
+                    <p>Fundador & Especialista en Ética de IA</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Sección CTA -->
     <section id="contact" class="cta">
         <div class="container">
-            <h2>Join Us in Shaping Ethical AI</h2>
-            <p>We're seeking angel investors who share our vision for creating AI that prioritizes human well-being and ethical principles. Join us in building a future where technology serves humanity.</p>
-            <a href="mailto:contact@laia-ai.com" class="btn">Contact for Investment</a>
+            <h2>Únete a Nosotros en la Formación de IA Ética</h2>
+            <p>Buscamos inversores que compartan nuestra visión para crear IA que priorice el bienestar humano y los principios éticos. Únete a nosotros en construir un futuro donde la tecnología sirva a la humanidad.</p>
+            <a href="mailto:contact@brisecom.org" class="btn">Contactar para Inversión</a>
         </div>
     </section>
 
@@ -598,44 +590,45 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>LAIA</h3>
-                    <p>Creating rules for a living AI with ethics in mind and for improving human lives and well-being.</p>
+                    <p>Creando reglas para una IA viva con ética en mente y para mejorar vidas humanas y bienestar.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/company/brisecom/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><div class="x-twitter-icon"></div></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>Enlaces Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#mission">Mission</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#mission">Misión</a></li>
+                        <li><a href="#team">Equipo</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact</h3>
+                    <h3>Contacto</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@laia-ai.com">contact@laia-ai.com</a></li>
-                        <li><a href="#">GitHub Repository</a></li>
+                        <li><a href="mailto:contact@brisecom.org">contact@brisecom.org</a></li>
+                        <li><a href="mailto:ximenez.francisco@brisecom.org">ximenez.francisco@brisecom.org</a></li>
+                        <li><a href="https://github.com/javi-jimenez/laia">Repositorio GitHub</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 LAIA. All rights reserved.</p>
+                <p>&copy; 2025 Brisecom SL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple mobile menu toggle
+        // Simple toggle del menú móvil
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
 
-        // Smooth scrolling for anchor links
+        // Scroll suave para enlaces de anclaje
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -650,7 +643,7 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
+                    // Cerrar menú móvil si está abierto
                     if (window.innerWidth <= 768) {
                         document.querySelector('.nav-links').style.display = 'none';
                     }
