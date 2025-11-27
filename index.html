@@ -500,21 +500,29 @@
             }
         }
 
-        /* Direcciones de texto para hebreo */
-        [lang="he"] {
+        /* Direcciones de texto para hebreo y árabe */
+        [lang="he"], [lang="ar"] {
             direction: rtl;
             text-align: right;
         }
 
-        [lang="he"] .section-title h2::after {
+        [lang="he"] .section-title h2::after,
+        [lang="ar"] .section-title h2::after {
             left: auto;
             right: 50%;
             transform: translateX(50%);
         }
 
         [lang="he"] .feature-card,
-        [lang="he"] .team-member {
+        [lang="he"] .team-member,
+        [lang="ar"] .feature-card,
+        [lang="ar"] .team-member {
             text-align: right;
+        }
+
+        /* Ajustes específicos para árabe */
+        [lang="ar"] {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial', sans-serif;
         }
     </style>
 </head>
@@ -536,6 +544,7 @@
                             <option value="zh">🇨🇳 中文</option>
                             <option value="ru">🇷🇺 Русский</option>
                             <option value="he">🇮🇱 עברית</option>
+                            <option value="ar">🇸🇦 العربية</option>
                             <option value="en">🇺🇸 English</option>
                         </select>
                     </li>
@@ -864,6 +873,42 @@
                 "footer.contact": "יצירת קשר",
                 "footer.github": "מאגר GitHub",
                 "footer.rights": "כל הזכויות שמורות."
+            },
+            ar: {
+                "nav.about": "من نحن",
+                "nav.mission": "المهمة",
+                "nav.team": "الفريق",
+                "nav.contact": "اتصل بنا",
+                "hero.title": "الذكاء الاصطناعي الأخلاقي لرفاهية الإنسان",
+                "hero.subtitle": "إنشاء قواعد للذكاء الاصطناعي الحي مع الأخلاق في الاعتبار لتحسين حياة الإنسان ورفاهيته",
+                "hero.learnMore": "اعرف المزيد",
+                "hero.invest": "استثمر في LAIA",
+                "about.title": "رؤيتنا",
+                "about.subtitle": "LAIA رائدة في تطوير أطر أخلاقية لأنظمة الذكاء الاصطناعي الحي",
+                "about.feature1.title": "إطار الذكاء الاصطناعي الأخلاقي",
+                "about.feature1.description": "تطوير مبادئ توجيهية أخلاقية شاملة وقواعد لأنظمة الذكاء الاصطناعي الحي التي تعطي الأولوية للقيم الإنسانية والرفاهية.",
+                "about.feature2.title": "التركيز على رفاهية الإنسان",
+                "about.feature2.description": "إنشاء أنظمة ذكاء اصطناعي مصممة لتعزيز حياة الإنسان والصحة العقلية ونوعية الحياة من خلال التنفيذ المدروس.",
+                "about.feature3.title": "شفاف ومسؤول",
+                "about.feature3.description": "بناء الذكاء الاصطناعي مع الشفافية والمساءلة في جوهره، وضمان أن القرارات يمكن فهمها وتحديها من قبل البشر.",
+                "mission.title": "مهمتنا",
+                "mission.subtitle": "خلق مستقبل حيث يزدهر الذكاء الاصطناعي والإنسانية معًا",
+                "mission.content.title": "بناء الأسس الأخلاقية للذكاء الاصطناعي الحي",
+                "mission.content.p1": "في LAIA، نعتقد أن الذكاء الاصطناعي يجب أن يتم تطويره بمبادئ أخلاقية قوية تعطي الأولوية للكرامة الإنسانية والحقوق والرفاهية. مهمتنا هي إنشاء أطر وقواعد شاملة توجه تطوير أنظمة الذكاء الاصطناعي الحي.",
+                "mission.content.p2": "نحن نعالج الحاجة الحرجة للمبادئ التوجيهية الأخلاقية في تطوير الذكاء الاصطناعي التي تتجاوز مجرد اتباع القواعد لتشمل التعاطف والتفكير الأخلاقي والالتزام الحقيقي بتحسين حياة الإنسان.",
+                "mission.content.p3": "يجمع نهجنا بين البحث المتقدم في الذكاء الاصطناعي والبحث الفلسفي العميق، مما يضمن أن أنظمة الذكاء الاصطناعي التي نساعد في إنشائها ليست ذكية فحسب، بل حكيمة ورحيمة ومتوافقة مع القيم الإنسانية.",
+                "mission.content.button": "انضم إلى مهمتنا",
+                "team.title": "فريقنا",
+                "team.subtitle": "خبراء في الذكاء الاصطناعي والأخلاق والتصميم المتمحور حول الإنسان",
+                "team.role": "المؤسس وأخصائي أخلاقيات الذكاء الاصطناعي",
+                "cta.title": "انضم إلينا في تشكيل الذكاء الاصطناعي الأخلاقي",
+                "cta.description": "نحن نبحث عن مستثمرين يشاركوننا رؤيتنا لخلق ذكاء اصطناعي يعطي الأولوية لرفاهية الإنسان والمبادئ الأخلاقية. انضم إلينا في بناء مستقبل حيث تخدم التكنولوجيا البشرية.",
+                "cta.button": "اتصل للاستثمار",
+                "footer.description": "إنشاء قواعد للذكاء الاصطناعي الحي مع الأخلاق في الاعتبار ولتحسين حياة الإنسان ورفاهيته.",
+                "footer.links": "روابط سريعة",
+                "footer.contact": "اتصل بنا",
+                "footer.github": "مستودع GitHub",
+                "footer.rights": "جميع الحقوق محفوظة."
             },
             en: {
                 "nav.about": "About",
